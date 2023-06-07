@@ -1,1 +1,29 @@
+version: '3'
+services:
+  bike:
+    image: vishnun1/bikerepo:latest
+    ports:
+      - "90:80"
+    deploy:
+      replicas: 3
 
+  ship:
+    image: vishnun1/shiprepo:latest
+    ports:
+      - "91:80"
+    deploy:
+      replicas: 3
+
+  train:
+    image: vishnun1/trainrepo:latest
+    ports:
+      - "92:80"
+    deploy:
+      replicas: 3
+
+  bus:
+    image: vishnun1/busrepo:latest
+    ports:
+      - "93:80"
+    deploy:
+      replicas: 3
